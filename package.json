@@ -1,6 +1,6 @@
 {
   "name": "atom-build-spec-helpers",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Spec helpers for atom-build related packages",
   "devDependencies": {
     "jshint": "^2.8.0",
