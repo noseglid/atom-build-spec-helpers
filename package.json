@@ -1,0 +1,28 @@
+{
+  "name": "atom-build-spec-helpers",
+  "version": "0.0.0",
+  "description": "Spec helpers for atom-build related packages",
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "jscs": "^2.1.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "jscs index.js && jshint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noseglid/atom-build-spec-helpers"
+  },
+  "keywords": [
+    "spec",
+    "atom",
+    "helpers"
+  ],
+  "author": "Alexander Olsson <noseglid@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noseglid/atom-build-spec-helpers/issues"
+  },
+  "homepage": "https://github.com/noseglid/atom-build-spec-helpers"
+}
