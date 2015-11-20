@@ -40,6 +40,9 @@ module.exports = {
   awaitTargets: function () {
     return new Promise(function(resolve, reject) {
       let ev = atom.notifications.onDidAddNotification((notification) => {
+        if (notification.getType() === 'error' && notification.getMessage() === 'Ooops. Something went wrong.') {
+          return reject(notification);
+        }
         if (notification.getMessage() !== 'Build targets parsed.') {
           return;
         }
