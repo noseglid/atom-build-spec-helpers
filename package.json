@@ -1,6 +1,6 @@
 {
   "name": "atom-build-spec-helpers",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Spec helpers for atom-build related packages",
   "devDependencies": {
     "babel-eslint": "^4.1.5",
