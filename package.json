@@ -9,9 +9,6 @@
     "eslint-plugin-react": "^3.10.0"
   },
   "main": "index.js",
-  "scripts": {
-    "test": "jscs index.js && jshint index.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/noseglid/atom-build-spec-helpers"

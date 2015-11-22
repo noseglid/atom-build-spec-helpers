@@ -36,6 +36,25 @@ module.exports = {
     this.dispatchKeyboardEvent(element, 'keyup', eventArgs);
   },
 
+  activate: function (pkgUnderTest) {
+    return atom.packages.activatePackage('build')
+      .then(() => atom.packages.activatePackage(pkgUnderTest))
+      .then(() => {
+        return new Promise((resolve, reject) => {
+          const buildPackage = atom.packages.getActivePackage('build');
+          const provider = atom.packages.getActivePackage(pkgUnderTest).mainModule.provideBuilder();
+          const check = () => {
+            if (!buildPackage.mainModule || !buildPackage.mainModule.tools.find(t => t.niceName === provider.niceName)) {
+              return setTimeout(check, 20);
+            }
+            resolve();
+          };
+
+          check();
+        });
+      });
+  },
+
   awaitTargets: function () {
     return new Promise((resolve, reject) => {
       const ev = atom.notifications.onDidAddNotification((notification) => {
